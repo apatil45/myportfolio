@@ -16,329 +16,386 @@
         <!-- Favicon -->
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>AP</text></svg>">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/styles.css">
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     </head>    
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Arpit Patil</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#patents">Patents</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certifications">Certifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">Portfolio</a>
+                <div class="navbar-toggle" id="navbar-toggle">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </div>
+                <div class="navbar-nav" id="navbar-nav">
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#experience">Experience</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#achievements">Achievements</a>
+                    <a class="nav-link" href="#blog">Blog</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <section id="photo" class="photo section dark-background">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7 text-center text-md-start">
-                    <h1 class="display-4 fw-bold">Arpit Patil</h1>
-                    <h3 class="lead my-3"><span id="typed"></span></h3>
-                    <div class="social-icons my-4">
-                        <a href="https://www.linkedin.com/in/arpit-patil-/" target="_blank" class="me-3" aria-label="LinkedIn Profile"><i class="fab fa-linkedin fa-2x"></i></a>
-                        <a href="https://github.com/apatil45" target="_blank" class="me-3" aria-label="GitHub Profile"><i class="fab fa-github fa-2x"></i></a>
-                        <a href="mailto:apatil45@stevens.edu" target="_blank" aria-label="Email Me"><i class="fa fa-envelope fa-2x"></i></a>
-                    </div>
-                    <a href="Arpit_S_Patil_Resume.pdf" class="btn btn-primary btn-lg"><i class="fas fa-download"></i> Download Resume</a>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Arpit Patil</h1>
+                <p class="hero-subtitle"><span id="typed"></span></p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/arpit-patil-/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/apatil45" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:apatil45@stevens.edu" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
-                <div class="col-md-5 text-center mt-4 mt-md-0">
-                    <img src="images/Arpit_new.jpeg" class="img-fluid hero-img" alt="Arpit Patil Profile Picture">
+            </div>
+            <div class="hero-image-container">
+                <img src="images/Arpit_new.jpeg" class="hero-image" alt="Arpit Patil Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I'm passionate about solving complex problems through technology. Whether it's building robust microservices 
+                    that handle millions of requests or training neural networks that can understand human language, I love the 
+                    challenge of turning ideas into reality. My journey started with electronics engineering, but I quickly fell 
+                    in love with the endless possibilities of software and AI.
+                </p>
+                <p>
+                    When I'm not coding, you'll find me exploring the latest research papers in NLP or experimenting with 
+                    quantum computing concepts. I believe the best solutions come from understanding both the technical depth 
+                    and the human impact of what we build.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="looking-for-content">
+                <div class="opportunity-cards">
+                    <div class="opportunity-card">
+                        <i class="fas fa-code opportunity-icon"></i>
+                        <h3>Software Engineering</h3>
+                        <p>Building scalable applications with modern frameworks and cloud technologies</p>
+                        <ul>
+                            <li>Backend: Python, Java, Node.js, FastAPI, Express.js</li>
+                            <li>Frontend: React.js, Next.js, TypeScript, Tailwind CSS</li>
+                            <li>DevOps: AWS, Docker, Kubernetes, Jenkins, CI/CD</li>
+                            <li>Databases: PostgreSQL, MySQL, DynamoDB</li>
+                        </ul>
+                    </div>
+                    <div class="opportunity-card">
+                        <i class="fas fa-brain opportunity-icon"></i>
+                        <h3>AI/ML Research</h3>
+                        <p>Developing intelligent systems and machine learning solutions</p>
+                        <ul>
+                            <li>Deep Learning: TensorFlow, PyTorch, Computer Vision</li>
+                            <li>NLP: BERT, RoBERTa, LLaMA, Question Answering</li>
+                            <li>Research: IIT-B internship, numerical modeling, FEMM</li>
+                            <li>Applications: Healthcare AI, Financial document analysis</li>
+                        </ul>
+                    </div>
+                    <div class="opportunity-card">
+                        <i class="fas fa-rocket opportunity-icon"></i>
+                        <h3>Innovation & Leadership</h3>
+                        <p>Entrepreneurship, patent development, and technology leadership</p>
+                        <ul>
+                            <li>Startup: Electrify Mobility co-founder, $6K funding</li>
+                            <li>Patents: Indian & German utility models</li>
+                            <li>Research: IIT-B, 40% performance improvements</li>
+                            <li>Teaching: AI/ML course assistant at SPIT</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about section card-sec">
+    <section id="experience" class="section">
         <div class="container">
-            <div class="row gy-4 align-items-center">
-                <div class="col-md-12">
-                  <div class="about-me">
-                    <h2>About me</h2>
-                    <p class="text-justify">
-                        Hello! I am passionate about leveraging Deep Learning and Natural Language Processing (NLP) to build innovative solutions. My expertise spans various programming languages, ML frameworks, and tools.
-                    <div class="skills-section">
-                        <h4 class="skills-title">Key Skills</h4>
-                        <div class="skill-category">
-                            <h5>Languages</h5>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">Octave</span>
-                            <span class="skill-tag">SQL</span>
-                        </div>
-                        <div class="skill-category">
-                            <h5>Frameworks & Libraries</h5>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">Scikit-learn</span>
-                            <span class="skill-tag">BERT</span>
-                            <span class="skill-tag">Next.js</span>
-                            <span class="skill-tag">Flask</span>
-                        </div>
-                        <div class="skill-category">
-                            <h5>Tools & Platforms</h5>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">FEMM</span>
-                            <span class="skill-tag">Streamlit</span>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="section card-sec">
-        <div class="container">
-            <h2>Education</h2>
+            <h2 class="section-title">Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="images/Stevens_logo.png" alt="Stevens Institute of Technology" loading="lazy">
-                    </div>
                     <div class="timeline-content">
-                        <h3>Stevens Institute of Technology, Hoboken, NJ</h3>
-                        <span>Master of Science in Computer Science (ML) (Sept 2024 – Dec 2025)</span>
-                        <ul>
-                            <li>Courses: Deep Learning, NLP, Applied Machine Learning</li>
-                            <li>GPA: 3.7/4.0</li>
-                        </ul>
+                        <h3 class="timeline-title">Parkway AI: Intelligent Parking & Automation Platform</h3>
+                        <p class="timeline-meta">Software Engineer (Independent Project) - Remote, USA (Aug 2025 – Present)</p>
+                        <div class="timeline-description" id="exp-1">
+                            <ul>
+                                <li>Designed and developed microservices using Docker and Kubernetes, enabling secure, modular, and maintainable backend systems.</li>
+                                <li>Built RESTful APIs & integrated with React.js frontend, leveraging functional & class-based components for dynamic user interfaces.</li>
+                                <li>Implemented automated CI/CD pipelines using Jenkins & Git, reducing deployment errors by 25% & accelerating releases.</li>
+                                <li>Developed and optimized complex SQL and ORM data models for 30% faster query response in PostgreSQL and Oracle systems.</li>
+                                <li>Conducted unit and integration testing with JUnit and Playwright, improving software reliability and code quality.</li>
+                            </ul>
+                        </div>
+                        <button class="timeline-more-btn" onclick="toggleExperience('exp-1', this)">Read more</button>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="images/LogoSPIT.png" alt="Sardar Patel Institute of Technology" loading="lazy">
-                    </div>
                     <div class="timeline-content">
-                        <h3>Sardar Patel Institute of Technology, Mumbai, IN</h3>
-                        <span>Bachelor of Technology in Electronics Engineering (Aug 2020 – June 2024)</span>
-                        <ul>
-                            <li>Minor: Computer Engineering</li>
-                            <li>GPA: 8.62/10.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section card-sec">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="images\ElectrifyMobility_logo.png" alt="Electrify Mobility" loading="lazy">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Electrify Mobility: Enhancing Mobility & Independence</h3>
-                        <span>Co-Founder & C.E.O (July 2023 – June 2024)</span>
-                        <ul>
-                            <li>Designed and built an IoT-enabled RF device to empower drivers with lower limb disabilities by centralizing vehicle controls.</li>
-                            <li>Led product development, tech architecture, team coordination, and funding strategy.</li>
-                            <li>Secured ₹5L ($6,000) government grant (NIDHI PRAYAS) and delivered a fully functional, field-tested prototype in partnership with Ferro-Equip.</li>
-                        </ul>
+                        <h3 class="timeline-title">Electrify Mobility: Enhancing Mobility & Independence</h3>
+                        <p class="timeline-meta">Co-Founder & C.E.O (July 2023 – June 2024)</p>
+                        <div class="timeline-description" id="exp-2">
+                            <ul>
+                                <li>Designed and built an IoT-enabled RF device to empower drivers with lower limb disabilities by centralizing vehicle controls.</li>
+                                <li>Led product development, tech architecture, team coordination, and funding strategy.</li>
+                                <li>Secured ₹5L ($6,000) government grant (NIDHI PRAYAS) and delivered a fully functional, field-tested prototype.</li>
+                            </ul>
+                        </div>
+                        <button class="timeline-more-btn" onclick="toggleExperience('exp-2', this)">Read more</button>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="images/iitb.png" alt="Indian Institute of Technology Bombay" loading="lazy">
-                    </div>
                     <div class="timeline-content">
-                        <h3>Indian Institute of Technology Bombay (IIT-B)</h3>
-                        <span>Research Intern (Jan 2023 – July 2023)</span>
-                        <ul>
-                            <li>Built open-source EV machine co-simulation with FEMM 4.2 + Octave</li>
-                            <li>Implemented fast solvers for non-linear EV circuits (<20 iterations)</li>
-                            <li>Cut simulation time by 35% via image-based FEMM caching</li>
-                            <li>Extended tool for motor/transformer tests with <8% deviation vs. ANSYS</li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="images/LogoSPIT.png" alt="Sardar Patel Institute of Technology" loading="lazy">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Sardar Patel Institute of Technology (S.P.I.T.)</h3>
-                        <span>Teaching Assistant (Aug 2022 – Jan 2023)</span>
-                        <ul>
-                            <li>Assisted the Head of ECE department in conducting the Artificial Intelligence, and Machine Learning course.</li>
-                            <li>Evaluated the exam papers, conducted labs and doubt-solving sessions for fellow students.</li>
-                        </ul>
+                        <h3 class="timeline-title">Indian Institute of Technology Bombay (IIT-B)</h3>
+                        <p class="timeline-meta">Research Intern - Mumbai, IN (Jan 2023 – July 2023)</p>
+                        <div class="timeline-description" id="exp-3">
+                            <ul>
+                                <li>Built co-simulation setup integrating FEMM 4.2 & GNU Octave, with 40% improvement in performance of steady-state analysis.</li>
+                                <li>Implemented & debugged 12+ numerical models with Finite Element & Integration methods, improving system accuracy by 25%.</li>
+                                <li>Automated data exchange pipelines using LuT, reducing manual computation time by 35% with reproducible simulations.</li>
+                                <li>Developed data analysis scripts & 10+ visual dashboards in MATLAB, transforming simulation outputs into performance metrics.</li>
+                            </ul>
+                        </div>
+                        <button class="timeline-more-btn" onclick="toggleExperience('exp-3', this)">Read more</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-        <section id="projects" class="section card-sec">
+    <section id="projects" class="section">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="cards">
+            <h2 class="section-title">Projects</h2>
+            <div class="card-grid">
                 <div class="card">
-                    <img src="images\qubit_play.png" alt="Qubit Play Project Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="https://quantum-chess-vert.vercel.app/" target="_blank" class="card-title">Qubit Play: Quantum Gaming Platform</a>
-                        <p class="card-destination">Technologies used: Next.js, TypeScript, Tailwind CSS, NextAuth.js</p>
+                    <img src="images/blackjack.jpg" alt="Blackjack DevOps Project" class="card-image" loading="lazy">
+                    <h3 class="card-title">Blackjack Game: DevOps Integration</h3>
+                    <p class="card-description" id="desc-1">Full-stack Blackjack game with comprehensive DevOps pipeline. Features real-time gameplay, user authentication, and win-loss analytics. Built with modern web technologies and deployed using containerization.</p>
+                    <button class="card-more-btn" onclick="toggleDescription('desc-1', this)">Read more</button>
+                    <div class="project-meta">
+                        <span class="project-duration">Aug 2025 - Present</span>
+                        <span class="project-tech">FastAPI, PostgreSQL, AWS ECS, Docker, Playwright</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">View Project</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images\ARQIVE.png" alt="ARQIVE Project Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="arqive_project_link_placeholder" target="_blank" class="card-title">ARQIVE: Audit Report Query & Insight Vector Engine</a>
-                        <p class="card-destination">Technologies used: BERT, Flask, Streamlit</p>
+                    <img src="images/qubit_play.png" alt="Quantum Chess Project" class="card-image" loading="lazy">
+                    <h3 class="card-title">Quantum Chess and Puzzles</h3>
+                    <p class="card-description" id="desc-2">Co-developed a unique chess and particle puzzle platform based around quantum principles like superposition and entanglement. Features interactive quantum mechanics simulations and educational content.</p>
+                    <button class="card-more-btn" onclick="toggleDescription('desc-2', this)">Read more</button>
+                    <div class="project-meta">
+                        <span class="project-duration">Feb 2025 - Jun 2025</span>
+                        <span class="project-tech">Next.js, TypeScript, Tailwind CSS, Vercel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://quantum-chess-vert.vercel.app/" target="_blank" class="btn btn-outline">View Project</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images\Questify.png" alt="Questify Project Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="https://github.com/apatil45/Questify" target="_blank" class="card-title">Questify: Hybrid NLP Question Answering System</a>
-                        <p class="card-destination">Technologies used: RoBERTa, FLAN-T5, Python</p>
+                    <img src="images/ARQIVE.png" alt="ARQIVE Project" class="card-image" loading="lazy">
+                    <h3 class="card-title">ARQIVE: Audit Report Query & Insight Vector Engine</h3>
+                    <p class="card-description" id="desc-3">Designed an AI copilot system to parse and query financial audit documents, with 92% semantic match accuracy using BERT. Includes natural language processing and document analysis capabilities.</p>
+                    <button class="card-more-btn" onclick="toggleDescription('desc-3', this)">Read more</button>
+                    <div class="project-meta">
+                        <span class="project-duration">Jun 2024 - Aug 2024</span>
+                        <span class="project-tech">BERT, Flask, Streamlit, PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline">View Project</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images\cardioCare.jpg" alt="CardioCare Project Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="https://github.com/apatil45/CardioCare" target="_blank" class="card-title">EchoAI: Cardiovascular Anomaly Detection</a>
-                        <p class="card-destination">Technologies used: Deep Learning, Computer Vision, Python</p>
+                    <img src="images/Questify.png" alt="Questify Project" class="card-image" loading="lazy">
+                    <h3 class="card-title">Questify: Hybrid NLP Question Answering System</h3>
+                    <p class="card-description" id="desc-4">Fine-tuned RoBERTa model on SQuAD dataset, with 15% accuracy gain via optimized tokenization & confidence thresholding. Implements advanced NLP techniques for question answering.</p>
+                    <button class="card-more-btn" onclick="toggleDescription('desc-4', this)">Read more</button>
+                    <div class="project-meta">
+                        <span class="project-duration">Mar 2024 - May 2024</span>
+                        <span class="project-tech">RoBERTa, LLaMA, Python, Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/apatil45/Questify" target="_blank" class="btn btn-outline">View Project</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images\spacey.jpg" alt="SpaceY Project Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="https://github.com/apatil45/SpaceY" target="_blank" class="card-title">SpaceY: Predictive Stock Analysis</a>
-                        <p class="card-destination">Technologies used: Pandas, NumPy, Matplotlib, Seaborn, Folium, Logit, SVM, CART, KNN</p>
+                    <img src="images/cardioCare.jpg" alt="EchoAI Project" class="card-image" loading="lazy">
+                    <h3 class="card-title">EchoAI: Cardiovascular Anomaly Detection</h3>
+                    <p class="card-description" id="desc-5">Deep learning system for detecting cardiovascular anomalies using medical imaging and computer vision. Implements state-of-the-art CNN architectures for medical diagnosis.</p>
+                    <button class="card-more-btn" onclick="toggleDescription('desc-5', this)">Read more</button>
+                    <div class="project-meta">
+                        <span class="project-duration">Jan 2024 - Mar 2024</span>
+                        <span class="project-tech">Deep Learning, Computer Vision, Python</span>
                     </div>
-                </div>
-            </div>    
-        </div>
-    </section>
-
-    <section id="patents" class="section card-sec">
-        <div class="container">
-            <h2>Patents</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="images\em.jpg" alt="Electrify Mobility Patent Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="https://drive.google.com/file/d/1sKXDP8THRmMkVBfLa8R0NeqE1gBJWzOe/view" target="_blank" class="card-title">Patent - Electrify Mobility</a>
-                        <p class="card-destination"><strong>Office:</strong> Indian Patent Office<br><strong>Number:</strong> 202421034129</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images\german.jpg" alt="German Patent Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="https://drive.google.com/file/d/1LUod-jIgg5ybX0KuiL6z3yrrFeNlZ9LF/view" target="_blank" class="card-title">German Utility Model - Electrify Mobility</a>
-                        <p class="card-destination"><strong>Office:</strong> German Patent and Trade Mark Office<br><strong>Grant No:</strong> 202024102302.1</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images\em.jpg" alt="Electrify Mobility Design Patent Image" class="card-img" loading="lazy">
-                    <div class="card-content">
-                        <a href="https://drive.google.com/file/d/1wfuFlZIg2PU0hACoTMus4LDVY-0j8TRk/view?usp=drivesdk" target="_blank" class="card-title">Design Patent - Electrify Mobility</a>
-                        <p class="card-destination"><strong>Office:</strong> Indian Patent Office</p>
-                    </div>
-                </div>
-            </div>    
-        </div>
-    </section>
-    
-    <section id="certifications" class="section card-sec">
-        <div class="container">
-            <h2>Certifications</h2>
-            <div class="cards">
-                <div class="card">
-                    <div class="card-content">
-                        <i class="fas fa-certificate certification-icon"></i>
-                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/AAQQT6EZ4LZU?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=prof" target="_blank" class="card-title">Data Science</a>
-                        <p class="card-destination">Issued by Coursera (IBM)</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <i class="fas fa-certificate certification-icon"></i>
-                        <a href="#" target="_blank" class="card-title">Deep Learning</a>
-                        <p class="card-destination">Issued by NPTEL</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <i class="fas fa-certificate certification-icon"></i>
-                        <a href="https://drive.google.com/file/d/1R4Mk1pS-7Vs6aiK6aejza5-Qoy67upnr/view" target="_blank" class="card-title">Power BI</a>
-                        <p class="card-destination">Issued by Linkedin Learning</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <i class="fas fa-certificate certification-icon"></i>
-                        <a href="https://www.coursera.org/account/accomplishments/verify/56BF8DMLBRDY?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" target="_blank" class="card-title">Customer Analytics</a>
-                        <p class="card-destination">Issued by The Wharton School</p>
+                    <div class="project-links">
+                        <a href="https://github.com/apatil45/CardioCare" target="_blank" class="btn btn-outline">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section card-sec">
+    <section id="achievements" class="section section-alt">
         <div class="container">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/xpwrjdll" method="POST">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="achievement-cards">
+                <div class="achievement-card">
+                    <h3>Patents & Innovation</h3>
+                    <div class="achievement-description" id="ach-1">
+                        <p>Published two patents: One granted in India and one German utility model focused on electric mobility innovation. These patents demonstrate my ability to identify market opportunities and develop innovative solutions for sustainable transportation.</p>
+                    </div>
+                    <p class="achievement-source">Indian Patent Office, German Patent Office</p>
+                    <button class="achievement-more-btn" onclick="toggleAchievement('ach-1', this)">Read more</button>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                <div class="achievement-card">
+                    <h3>Startup Success</h3>
+                    <div class="achievement-description" id="ach-2">
+                        <p>Co-founded Electrify Mobility and secured $6,000 government funding from Startup India initiative. Led product development, team coordination, and successfully delivered a fully functional prototype that addresses mobility challenges for people with disabilities.</p>
+                    </div>
+                    <p class="achievement-source">Startup India, NIDHI PRAYAS</p>
+                    <button class="achievement-more-btn" onclick="toggleAchievement('ach-2', this)">Read more</button>
                 </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                <div class="achievement-card">
+                    <h3>Professional Certifications</h3>
+                    <div class="achievement-description" id="ach-3">
+                        <p>IBM Data Science, Power BI (LinkedIn), Customer Analytics (The Wharton School), Cloud Computing (NPTEL). These certifications demonstrate expertise in data analysis, business intelligence, and cloud technologies essential for modern software development.</p>
+                    </div>
+                    <p class="achievement-source">IBM, LinkedIn, Wharton, NPTEL</p>
+                    <button class="achievement-more-btn" onclick="toggleAchievement('ach-3', this)">Read more</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+                <div class="achievement-card">
+                    <h3>Academic Excellence</h3>
+                    <div class="achievement-description" id="ach-4">
+                        <p>M.S. in Computer Science at Stevens Institute of Technology with 3.71/4.00 GPA. Specialized coursework in machine learning, software engineering, and data structures, with research focus on AI applications in healthcare and finance.</p>
+                    </div>
+                    <p class="achievement-source">Stevens Institute of Technology</p>
+                    <button class="achievement-more-btn" onclick="toggleAchievement('ach-4', this)">Read more</button>
+                </div>
+            </div>
         </div>
     </section>
-    
-    
-    <footer>
+
+    <section id="blog" class="section">
         <div class="container">
-            <p>&copy; <span id="year"></span> Arpit Patil. All rights reserved.</p>
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">December 2024</span>
+                        <span class="blog-category">Deep Learning</span>
+                    </div>
+                    <h3 class="blog-title">Attention is All You Need: The Breakthrough Powering Today's AI</h3>
+                    <p class="blog-excerpt">A comprehensive analysis of the Transformer architecture and its revolutionary impact on modern AI systems, from BERT to GPT and beyond.</p>
+                    <a href="https://medium.com/@arpitpatil.official/attention-is-all-you-need-the-breakthrough-powering-todays-ai-1fa4b6a3523d" target="_blank" class="blog-link">Read on Medium →</a>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">November 2024</span>
+                        <span class="blog-category">AI/ML</span>
+                    </div>
+                    <h3 class="blog-title">Questify: Smarter Question Answering with Hybrid AI</h3>
+                    <p class="blog-excerpt">Exploring the implementation of hybrid question answering systems using RoBERTa and FLAN-T5, with insights from our Questify project that achieved 15% accuracy improvements.</p>
+                    <a href="https://medium.com/@arpitpatil.official/questify-smarter-question-answering-with-hybrid-ai-6b2e7160c565" target="_blank" class="blog-link">Read on Medium →</a>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">October 2024</span>
+                        <span class="blog-category">Philosophy</span>
+                    </div>
+                    <h3 class="blog-title">Atman and Brahman: A Deep Dive into the Fundamental Concepts of Existence</h3>
+                    <p class="blog-excerpt">Exploring the profound philosophical concepts of Atman and Brahman in Hindu philosophy, examining their relevance to modern understanding of consciousness and existence.</p>
+                    <a href="https://medium.com/@arpitpatil.official/atman-and-brahman-a-deep-dive-into-the-fundamental-concepts-of-existence-acb057db1e02" target="_blank" class="blog-link">Read on Medium →</a>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content-minimal">
+                <div class="contact-info-minimal">
+                    <div class="contact-item-minimal">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:arpit.spatil5@gmail.com">Email Me</a>
+                    </div>
+                    <div class="contact-item-minimal">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+12015894724">+1-201-589-4724</a>
+                    </div>
+                    <div class="contact-item-minimal">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hoboken, NJ</span>
+                    </div>
+                </div>
+                <div class="contact-form-minimal">
+                    <form action="https://formspree.io/f/xpwrjdll" method="POST">
+                        <div class="form-row">
+                            <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+                            <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+                        </div>
+                        <textarea class="form-control" placeholder="Your Message" name="message" rows="3" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="bottom-nav" id="bottom-nav">
+        <a href="#about" class="bottom-nav-item">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+        </a>
+        <a href="#skills" class="bottom-nav-item">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+        </a>
+        <a href="#experience" class="bottom-nav-item">
+            <i class="fas fa-briefcase"></i>
+            <span>Experience</span>
+        </a>
+        <a href="#projects" class="bottom-nav-item">
+            <i class="fas fa-project-diagram"></i>
+            <span>Projects</span>
+        </a>
+        <a href="#contact" class="bottom-nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+    <!-- Floating Action Button (Mobile Only) -->
+    <button class="fab" id="fab" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
