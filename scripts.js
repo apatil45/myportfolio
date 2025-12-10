@@ -197,3 +197,125 @@ window.toggleAchievement = function(achId, button) {
         button.textContent = 'Read less';
     }
 }
+
+// Skills Carousel
+let currentSkillIndex = 0;
+const totalSkills = 4;
+let cardsVisible = 3; // Will be calculated dynamically
+
+function getCardsVisible() {
+    const container = document.querySelector('.skills-carousel-container');
+    if (!container) return 3;
+    
+    const containerWidth = container.offsetWidth;
+    const minCardWidth = 280;
+    const gap = 24; // var(--space-lg)
+    
+    // Account for button space on desktop
+    const buttonsVisible = window.innerWidth > 768;
+    const buttonSpace = buttonsVisible ? 96 : 0; // 48px per button + gap
+    const availableWidth = containerWidth - buttonSpace;
+    
+    // Calculate how many cards can fit
+    let visible = Math.floor((availableWidth + gap) / (minCardWidth + gap));
+    
+    // Ensure at least 1 and at most 4 cards
+    return Math.max(1, Math.min(4, visible));
+}
+
+function slideSkills(direction) {
+    const carousel = document.getElementById('skillsCarousel');
+    if (!carousel) return;
+    
+    cardsVisible = getCardsVisible();
+    
+    currentSkillIndex += direction;
+    
+    // Loop around
+    if (currentSkillIndex < 0) {
+        currentSkillIndex = Math.max(0, totalSkills - cardsVisible); // Show last cards
+    } else if (currentSkillIndex > totalSkills - cardsVisible) {
+        currentSkillIndex = 0; // Loop back to start
+    }
+    
+    // Get the first card to calculate width
+    const firstCard = carousel.querySelector('.opportunity-card');
+    if (!firstCard) return;
+    
+    // Calculate card width including gap
+    const cardWidth = firstCard.offsetWidth;
+    const gap = parseInt(getComputedStyle(carousel).gap) || 24;
+    const translateX = -(currentSkillIndex * (cardWidth + gap));
+    
+    carousel.style.transform = `translateX(${translateX}px)`;
+}
+
+// Initialize carousel position and set card widths
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('skillsCarousel');
+    const container = carousel?.parentElement;
+    
+    if (carousel && container) {
+        carousel.style.transform = 'translateX(0)';
+        currentSkillIndex = 0;
+        
+        // Set card widths based on container and number of visible cards
+        function setCardWidths() {
+            const containerWidth = container.offsetWidth;
+            const gap = 24; // var(--space-lg)
+            cardsVisible = getCardsVisible();
+            
+            // Calculate card width to fit exactly the number of visible cards
+            // Account for button space on sides (if visible)
+            const buttonsVisible = window.innerWidth > 768;
+            const buttonSpace = buttonsVisible ? 96 : 0; // 48px per button + gap
+            const availableWidth = containerWidth - buttonSpace;
+            const totalGapWidth = gap * (cardsVisible - 1);
+            const cardWidth = (availableWidth - totalGapWidth) / cardsVisible;
+            
+            const cards = carousel.querySelectorAll('.opportunity-card');
+            cards.forEach(card => {
+                // Ensure cards are never smaller than min or larger than max
+                // But prioritize fitting exactly the number of visible cards
+                const finalWidth = Math.max(280, Math.min(450, cardWidth));
+                card.style.width = `${finalWidth}px`;
+            });
+            
+            // Reset position if current index is invalid
+            if (currentSkillIndex > totalSkills - cardsVisible) {
+                currentSkillIndex = Math.max(0, totalSkills - cardsVisible);
+            }
+            
+            // Update transform
+            const firstCard = carousel.querySelector('.opportunity-card');
+            if (firstCard) {
+                const cardWidth = firstCard.offsetWidth;
+                const gap = parseInt(getComputedStyle(carousel).gap) || 24;
+                carousel.style.transform = `translateX(${-(currentSkillIndex * (cardWidth + gap))}px)`;
+            }
+        }
+        
+        setCardWidths();
+        
+        // Update on resize
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                setCardWidths();
+                // Reset to start if needed
+                if (currentSkillIndex > totalSkills - getCardsVisible()) {
+                    currentSkillIndex = 0;
+                }
+                const firstCard = carousel.querySelector('.opportunity-card');
+                if (firstCard) {
+                    const cardWidth = firstCard.offsetWidth;
+                    const gap = parseInt(getComputedStyle(carousel).gap) || 24;
+                    carousel.style.transform = `translateX(${-(currentSkillIndex * (cardWidth + gap))}px)`;
+                }
+            }, 250);
+        });
+    }
+});
+
+// Resize timer (used in DOMContentLoaded)
+let resizeTimer;

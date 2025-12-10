@@ -330,7 +330,7 @@ a:hover {
 
 /* Sections */
 .section {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0; /* 64px - Moderate spacing for desktop */
 }
 
 .section-alt {
@@ -345,7 +345,7 @@ a:hover {
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-2xl); /* 64px - Moderate spacing for desktop */
     position: relative;
 }
 
@@ -375,6 +375,78 @@ a:hover {
 
 .about-content p:last-child {
     margin-bottom: 0;
+}
+
+/* Education Section */
+.education-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+}
+
+.education-item {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.education-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.education-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    padding: var(--space-xs);
+    display: block;
+}
+
+.education-title-wrapper {
+    flex: 1;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: var(--space-xs);
+}
+
+.education-location {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.education-degree {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.education-meta {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
 /* Cards - Responsive Grid with Fixed Widths */
@@ -914,7 +986,20 @@ textarea.form-field {
 }
 
 /* Responsive Design for Unified Contact */
+/* Tablet - Responsive Spacing */
 @media (max-width: 1024px) {
+    .section {
+        padding: var(--space-xl) 0; /* 48px for tablet */
+    }
+    
+    .section-title {
+        margin-bottom: var(--space-xl); /* 48px for tablet */
+    }
+    
+    .about-content {
+        padding: var(--space-lg) var(--space-md); /* Reduced padding on tablet */
+    }
+    
     .contact-unified {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
@@ -948,6 +1033,16 @@ textarea.form-field {
 
 /* App-Like Mobile Design */
 @media (max-width: 768px) {
+    /* Mobile - Compact Spacing */
+    .section {
+        padding: var(--space-lg) 0; /* 32px for mobile */
+    }
+    
+    .section-title {
+        margin-bottom: var(--space-lg); /* 32px for mobile */
+        font-size: 1.75rem; /* Slightly smaller on mobile */
+    }
+    
     /* Mobile App Container */
     body {
         background: #f8f9fa;
@@ -1151,6 +1246,34 @@ textarea.form-field {
     .about-content p {
         font-size: 1rem;
         line-height: 1.6;
+        margin-bottom: var(--space-md); /* Reduced from lg on mobile */
+    }
+    
+    .education-content {
+        padding: var(--space-md);
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .education-item {
+        padding: var(--space-lg);
+    }
+    
+    .education-header {
+        gap: var(--space-sm);
+    }
+    
+    .education-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .education-item h3 {
+        font-size: 1.25rem;
+    }
+    
+    .education-degree {
+        font-size: 1rem;
     }
     
     /* Mobile-Optimized Cards */
@@ -1220,6 +1343,31 @@ textarea.form-field {
     
     
     /* Mobile-Optimized Skills */
+    .skills-carousel-wrapper {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .carousel-btn {
+        display: none;
+    }
+    
+    .skills-carousel-container {
+        width: 100%;
+    }
+    
+    .skills-carousel {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    
+    .skills-carousel .opportunity-card {
+        flex: 0 0 100%;
+        width: 100% !important;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
     .opportunity-cards {
         display: flex;
         flex-direction: column;
@@ -1705,9 +1853,6 @@ button.card-more-btn {
         height: 180px;
     }
     
-    .section {
-        padding: var(--space-xl) 0;
-    }
     
     .card {
         padding: var(--space-md);
@@ -1747,11 +1892,103 @@ button.card-more-btn {
 }
 
 /* Opportunity Cards */
+/* Skills Carousel */
+.skills-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: var(--space-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.skills-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+}
+
+.skills-carousel {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: var(--space-lg);
+    transition: transform 0.5s ease-in-out;
+    grid-template-columns: none !important;
+    align-items: stretch;
+    will-change: transform;
+}
+
+.skills-carousel .opportunity-card {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 300px;
+    min-width: 280px;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.carousel-btn {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--primary);
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.carousel-btn:hover {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+    transform: scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Tablet - Show 2 cards */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .skills-carousel .opportunity-card {
+        min-width: 300px;
+        max-width: 450px;
+    }
+}
+
+/* Small tablets - Show 2 cards */
+@media (max-width: 900px) and (min-width: 769px) {
+    .skills-carousel .opportunity-card {
+        min-width: 280px;
+        max-width: 400px;
+    }
+}
+
 .opportunity-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-xl);
+}
+
+/* Override grid for carousel */
+.opportunity-cards.skills-carousel {
+    display: flex !important;
+    grid-template-columns: none !important;
+    margin-top: 0;
 }
 
 /* Achievements Section - Responsive Grid (3 cards) */

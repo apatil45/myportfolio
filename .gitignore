@@ -46,3 +46,7 @@ node_modules/
 # Temporary files
 *.tmp
 *.temp
+
+# Analysis and documentation files (not needed for deployment)
+*_ANALYSIS.md
+*_RECOMMENDATIONS.md
