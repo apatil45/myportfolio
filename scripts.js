@@ -200,7 +200,7 @@ window.toggleAchievement = function(achId, button) {
 
 // Skills Carousel
 let currentSkillIndex = 0;
-const totalSkills = 4;
+const totalSkills = 6;
 let cardsVisible = 3; // Will be calculated dynamically
 
 function getCardsVisible() {

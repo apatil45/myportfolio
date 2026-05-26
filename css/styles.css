@@ -330,7 +330,7 @@ a:hover {
 
 /* Sections */
 .section {
-    padding: var(--space-2xl) 0; /* 64px - Moderate spacing for desktop */
+    padding: var(--space-xl) 0; /* 48px - Balanced spacing for desktop */
 }
 
 .section-alt {
@@ -345,7 +345,7 @@ a:hover {
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--space-2xl); /* 64px - Moderate spacing for desktop */
+    margin-bottom: var(--space-xl); /* 48px - Balanced spacing for desktop */
     position: relative;
 }
 
@@ -360,8 +360,8 @@ a:hover {
 }
 
 .about-content {
-    margin-top: var(--space-lg);
-    padding: var(--space-xl) var(--space-lg);
+    margin-top: var(--space-md);
+    padding: var(--space-lg) var(--space-lg);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -381,7 +381,7 @@ a:hover {
 .education-content {
     max-width: 1000px;
     margin: 0 auto;
-    padding: var(--space-xl) var(--space-lg);
+    padding: var(--space-lg) var(--space-lg);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--space-lg);
@@ -454,7 +454,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     gap: var(--space-lg);
-    margin-top: var(--space-xl);
+    margin-top: var(--space-lg);
     max-width: 100%;
     overflow: hidden;
     justify-content: center;
@@ -643,7 +643,7 @@ a:hover {
 
 .timeline-item {
     position: relative;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
     padding-left: var(--space-xl);
 }
 
@@ -791,7 +791,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--space-lg);
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
     max-width: 100%;
     overflow: hidden;
 }
@@ -1035,11 +1035,11 @@ textarea.form-field {
 @media (max-width: 768px) {
     /* Mobile - Compact Spacing */
     .section {
-        padding: var(--space-lg) 0; /* 32px for mobile */
+        padding: var(--space-md) 0; /* 24px for mobile */
     }
     
     .section-title {
-        margin-bottom: var(--space-lg); /* 32px for mobile */
+        margin-bottom: var(--space-md); /* 24px for mobile */
         font-size: 1.75rem; /* Slightly smaller on mobile */
     }
     
@@ -1214,7 +1214,7 @@ textarea.form-field {
     .section {
         background: white;
         border-radius: 20px;
-        margin: var(--space-lg) 0;
+        margin: var(--space-md) 0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         overflow: hidden;
         border: 1px solid rgba(0, 0, 0, 0.05);
@@ -1235,12 +1235,12 @@ textarea.form-field {
     }
     
     .section .container {
-        padding: var(--space-lg);
+        padding: var(--space-md);
     }
     
     .about-content {
-        padding: var(--space-lg) var(--space-md);
-        margin-top: var(--space-md);
+        padding: var(--space-md);
+        margin-top: var(--space-sm);
     }
     
     .about-content p {
@@ -1896,7 +1896,7 @@ button.card-more-btn {
 .skills-carousel-wrapper {
     position: relative;
     width: 100%;
-    margin-top: var(--space-xl);
+    margin-top: var(--space-lg);
     display: flex;
     align-items: center;
     gap: var(--space-md);
@@ -1981,7 +1981,7 @@ button.card-more-btn {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-lg);
-    margin-top: var(--space-xl);
+    margin-top: var(--space-lg);
 }
 
 /* Override grid for carousel */
@@ -1996,7 +1996,7 @@ button.card-more-btn {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-lg);
-    margin-top: var(--space-xl);
+    margin-top: var(--space-lg);
     max-width: 100%;
     overflow: hidden;
 }
